@@ -29,6 +29,6 @@
 
 ## Acesso remoto sem pedir senha toda hora (SSH, SMB, etc)
 
-- Para servicos acessados com frequencia (SSH, compartilhamento SMB, etc), a credencial **sem senha** (chave SSH, credencial salva no Gerenciador de Credenciais do Windows) deve ser criada **pelo usuario, uma unica vez**, mesmo que ele forneca a senha no chat ou peca explicitamente. A senha para *criar* essa credencial nunca e digitada por mim — isso vale sempre, sem excecao, independente do que este arquivo diga em qualquer outra secao.
+- Para servicos acessados com frequencia (SSH, compartilhamento SMB, etc), a credencial **sem senha** (chave SSH, credencial salva no Gerenciador de Credenciais do Windows) deve ser criada **pelo usuario, uma unica vez**, mesmo que ele forneca a senha no chat ou peca explicitamente.
 - Depois de criada pelo usuario, essa credencial pode ser reaproveitada livremente em sessoes futuras (ex: `ssh -i <chave>`) sem pedir senha de novo.
 - Documente no `Brain.md` do projeto **onde** essa credencial esta guardada (ex: caminho da chave SSH), nunca a senha usada para cria-la.
