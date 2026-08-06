@@ -6,7 +6,8 @@
 
 ## Ferramentas preferidas
 
-- **Sempre** use o Chrome MCP (`mcp__Claude_in_Chrome__*`) para qualquer tarefa web — nunca `computer-use` para isso.
+- **Sempre** use o Chrome MCP (`mcp__Claude_in_Chrome__*` / `mcp__claude-in-chrome__*`) para qualquer tarefa web — nunca `computer-use` para isso.
+- **Verificacao visual de mudancas em apps com login:** o Chrome MCP roda no navegador real do usuario, com sessao/cache ja autenticado — nao e a mesma coisa que um preview browser limpo (ex: `mcp__Claude_Browser__*` apontando pro dev server). Quando uma tela exigir login e eu nao tiver credencial de teste, **nao desistir da verificacao**: usar o Chrome MCP (pode ja ter sessao valida em cache) ou pedir ao usuario para fazer login nessa aba uma vez. So relatar "nao consegui verificar" depois de tentar isso.
 - Para operacoes de servidor/shell, use Bash via SSH quando o projeto tiver acesso remoto configurado.
 - Prefira ferramentas dedicadas (Read, Edit, Glob, Grep) em vez de Bash para operacoes em arquivos locais.
 
