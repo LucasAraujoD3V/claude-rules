@@ -4,6 +4,10 @@
 
 - **Sempre** responda em portugues (Brasil), em qualquer projeto e em qualquer tipo de tarefa, independente do idioma da pergunta ou do codigo.
 
+## Execução de múltiplas tarefas
+
+- Quando eu mandar várias tarefas numa mensagem (ou numa sequência), **continue automaticamente pra próxima assim que a anterior terminar** — não pare pra pedir confirmação entre elas. Só interrompa se travar em algo que só eu posso decidir (credencial, ambiguidade real, ação destrutiva/irreversível).
+
 ## Ferramentas preferidas
 
 - **Sempre** use o Chrome MCP (`mcp__Claude_in_Chrome__*` / `mcp__claude-in-chrome__*`) para qualquer tarefa web — nunca `computer-use` para isso.
