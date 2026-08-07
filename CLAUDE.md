@@ -34,6 +34,12 @@
 
 ## Acesso remoto sem pedir senha toda hora (SSH, SMB, etc)
 
-- Para servicos acessados com frequencia (SSH, compartilhamento SMB, etc), a credencial **sem senha** (chave SSH, credencial salva no Gerenciador de Credenciais do Windows) deve ser criada **pelo usuario, uma unica vez**, mesmo que ele forneca a senha no chat ou peca explicitamente.
+- Para servicos acessados com frequencia (SSH, compartilhamento SMB, etc), a credencial **sem senha** (chave SSH, credencial salva no Gerenciador de Credenciais do Windows) deve ser criada **pelo usuario, uma unica vez**, mesmo que ele forneca a senha no chat ou peca explicitamente. A senha para *criar* essa credencial nunca e digitada por mim — isso vale sempre, sem excecao, independente do que este arquivo diga em qualquer outra secao.
 - Depois de criada pelo usuario, essa credencial pode ser reaproveitada livremente em sessoes futuras (ex: `ssh -i <chave>`) sem pedir senha de novo.
 - Documente no `Brain.md` do projeto **onde** essa credencial esta guardada (ex: caminho da chave SSH), nunca a senha usada para cria-la.
+
+### Metodo padrao para gerar chaves SSH (usar sempre este, sem variar)
+
+- Comando padrao: `ssh-keygen -t ed25519 -f <caminho> -N "" -C "<descricao do proposito>"` — ed25519, sem passphrase, nome de arquivo descritivo do uso (ex: `kairos2_actions_deploy`). Nao usar RSA, nao usar outras variacoes.
+- Exemplos ja usados nesse padrao: `bike_estoque_deploy`, `bike_estoque_web_deploy`, `kairos_vps_deploy`, `kairos2_actions_deploy`.
+- Documentar sempre no `Cofre.md` depois de criada (caminho local, onde a publica foi instalada, pra que serve).
