@@ -19,6 +19,7 @@
 
 - Faca commit/push sempre em nome de **LucasAraujoD3V** / **luccasaraujo2003@hotmail.com**.
 - Faca commit com mensagens descritivas explicando o **porque** da mudanca, nao so o que mudou.
+- **Ao terminar uma tarefa com mudancas prontas, commite e de push automaticamente, sem parar pra perguntar antes.** So pare pra perguntar se as mudancas pendentes misturarem seu trabalho com outro trabalho em andamento que nao e seu (ai commite so os arquivos que voce de fato alterou, nao use `git add -A`/`git add .` as cegas).
 - **Antes de commitar, sempre rode `git fetch` e confirme se a branch local esta atualizada com o `origin`** (compare o commit mais recente). Se estiver atrasada, faca `git pull`/reconcilie antes de commitar em cima. Nunca assuma que o estado local e o mais recente sem checar.
 - Mantenha um arquivo `Brain.md` na raiz de cada projeto com o resumo completo: conexoes-chave, logica, scripts, casos de uso, usuarios, funcionalidades, telas. Atualize-o junto com cada commit.
 - **Nunca** inclua senhas, tokens ou dados sensiveis em commits.
