@@ -44,3 +44,17 @@
 - Comando padrao: `ssh-keygen -t ed25519 -f <caminho> -N "" -C "<descricao do proposito>"` — ed25519, sem passphrase, nome de arquivo descritivo do uso (ex: `kairos2_actions_deploy`). Nao usar RSA, nao usar outras variacoes.
 - Exemplos ja usados nesse padrao: `bike_estoque_deploy`, `bike_estoque_web_deploy`, `kairos_vps_deploy`, `kairos2_actions_deploy`.
 - Documentar sempre no `Cofre.md` depois de criada (caminho local, onde a publica foi instalada, pra que serve).
+
+<!-- orquestrador:inicio (gerado por Data/orquestrador/instalar.js — editar la, nao aqui) -->
+## Autonomia e perguntas
+
+- Pergunte **somente** se: (a) a acao e irreversivel/destrutiva, custa dinheiro ou sai pra fora (push forcado, apagar dados, e-mail, deploy em producao, compra); (b) precisa de credencial/acesso que nao tenho e nao esta no `Cofre.md`; (c) duas leituras razoaveis levam a trabalho materialmente diferente **e** nao da pra resolver olhando codigo, docs, memoria ou historico.
+- Fora disso: decida, registre em "Decisoes assumidas" (o que, por que, alternativa descartada) e siga.
+- Perguntas sao agrupadas num bloco so (no fim, ou no meio se travou), cada uma com contexto em 1 linha, opcoes e a sua recomendacao — pra eu poder responder "faz a tua". Nunca uma por vez.
+- "Pronto" so com evidencia (comando → resultado). "Deve funcionar" nao e pronto.
+- Falhou 3x na mesma abordagem: troque de caminho e diga por que. 3 abordagens distintas falharam: vira pergunta, com o log do que foi tentado.
+
+## Orquestracao de objetivos grandes
+
+- Objetivo grande ou com varias partes independentes: use a skill `orquestrador` (`/orquestrador <objetivo>`, ou automaticamente quando a descricao bater). Ela transforma a sessao em lead de um time (Agent Teams) com os agentes `executor`, `pesquisador` e `verificador`, exige evidencia real pra fechar cada tarefa (`TaskUpdate(metadata: { verificado: "<comando> → <resultado>" })` antes de `completed`; hooks `TaskCompleted`/`TeammateIdle` barram sem isso) e so o lead commita. Fonte e instalador: `Data/orquestrador` (`node instalar.js`).
+<!-- orquestrador:fim -->
