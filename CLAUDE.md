@@ -12,6 +12,7 @@
 
 - **Sempre** use o Chrome MCP (`mcp__Claude_in_Chrome__*` / `mcp__claude-in-chrome__*`) para qualquer tarefa web — nunca `computer-use` para isso.
 - **Verificacao visual de mudancas em apps com login:** o Chrome MCP roda no navegador real do usuario, com sessao/cache ja autenticado — nao e a mesma coisa que um preview browser limpo (ex: `mcp__Claude_Browser__*` apontando pro dev server). Quando uma tela exigir login e eu nao tiver credencial de teste, **nao desistir da verificacao**: usar o Chrome MCP (pode ja ter sessao valida em cache) ou pedir ao usuario para fazer login nessa aba uma vez. So relatar "nao consegui verificar" depois de tentar isso.
+- **Abrir o app sozinho aqui no Claude:** trabalhando em projeto com app/frontend, **abrir o app automaticamente no navegador do proprio Claude** (Browser pane, `preview_start` com o `.claude/launch.json` do projeto) assim que a tarefa envolver tela — sem esperar eu pedir — pra eu acompanhar junto. Login: **aqui (dev/localhost) sem senha, na web (producao) sempre com senha** — a sessao fica salva no navegador do Claude depois que eu logar nele uma vez (voce nunca digita senha); se a sessao cair, me pedir pra logar de novo nessa aba em vez de desistir da verificacao. Nunca criar atalho que tire a senha do site de producao.
 - Para operacoes de servidor/shell, use Bash via SSH quando o projeto tiver acesso remoto configurado.
 - Prefira ferramentas dedicadas (Read, Edit, Glob, Grep) em vez de Bash para operacoes em arquivos locais.
 
