@@ -33,3 +33,8 @@ Data/                           # raiz — NAO e repositorio git
 ## Arquivo
 
 - [`CLAUDE.md`](./CLAUDE.md) — a configuração global completa.
+
+## Sincronização
+
+O `CLAUDE.md` daqui é a cópia versionada de `C:Userslucas.claudeCLAUDE.md` (o arquivo que o Claude Code lê sozinho em toda sessão daquele PC). **Os dois têm que ser iguais:** mudou um, sobe o outro na mesma hora. Não há sincronização automática: até 05/11/2026 as duas versões divergiram (este repo tinha "Autonomia e perguntas"; o PC tinha "Nunca ficar em silêncio" e "Verificação antes de entregar") e regras deixaram de valer. Trabalhar sempre num clone fora do iCloud: a pasta `Data/claude-rules` do iCloud ficou com o `.git` vazio.
+
