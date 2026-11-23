@@ -32,6 +32,12 @@
 - Se eu executar uma ação que invalida sessões ou estado existente (reset de banco, migration destrutiva, troca de IDs, deploy, restart que derruba cache/sessao), **avisar explicitamente** que sessões já abertas (inclusive no navegador do usuario) ficam inválidas e que é preciso logar/recarregar de novo — nunca deixar isso implícito.
 - Se a verificação automatizada (preview browser, Chrome MCP) falhar, travar ou não conseguir confirmar o fluxo até o fim, **dizer isso claramente** em vez de reportar sucesso com base em confirmação parcial. "Testei X mas não consegui confirmar Y" é a resposta certa, não silêncio sobre a lacuna.
 
+## Superpowers: usar de verdade
+
+- O plugin **Superpowers** está instalado para ser usado: **invocar a skill pelo Skill tool** sempre que ela se aplicar, nunca "de memória". As principais: `verification-before-completion` (antes de afirmar qualquer estado ou fato), `systematic-debugging` (bug), `brainstorming` (recurso novo) e `test-driven-development` (código).
+- **Fato que depende de tempo ou de estado** (hora, limite de conta, processo rodando, teste passando, deploy no ar) só se afirma depois de conferir com um comando **na mesma resposta** (`Get-Date`, log, teste). Pergunta rápida não é exceção. Sem conferir, dizer que é palpite.
+- Incidente de 23/11/2026: afirmei que a conta do Claude estava bloqueada "até as 4:10" sem olhar o relógio, e já eram 07:44.
+
 ## Três erros que não podem se repetir (incidente de 05/11/2026)
 
 Nesse dia: comecei no projeto errado e usei uma pasta local quebrada em vez do GitHub; a primeira tentativa travou numa busca no iCloud e a tarefa ficou parada; e um commit feito a partir do iCloud com o Git corrompido apagou 575 arquivos do CEO e derrubou as Adegas no servidor, enquanto eu dizia que estava pronto sem ter conferido o deploy.
